@@ -148,7 +148,7 @@
         },
         "authorUrl": "https://github.com/Vector35",
         "packageUrl": "https://api.github.com/repos/Vector35/OpaquePredicatePatcher/zipball/v1.0",
-        "path": "ectorpaqueredicateatcher",
+        "path": "Vector35_OpaquePredicatePatcher",
         "commit": "223b4f9f97b5914672ff089b7dfec0a57517cff8",
         "platforms": [],
         "installinstructions": {}
@@ -335,7 +335,7 @@
         },
         "authorUrl": "https://github.com/Vector35",
         "packageUrl": "https://api.github.com/repos/Vector35/sample_plugin/zipball/v1.1",
-        "path": "ectorsampleplugin",
+        "path": "Vector35_sample_plugin",
         "commit": "f8972714cfbc1531b469f0c232091da3f8c1d50b",
         "minimumBinaryNinjaVersion": 0
     }
