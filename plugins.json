@@ -1,23 +1,35 @@
 [
     {
+        "pluginmetadataversion": 2,
         "name": "OpaquePredicatePatcher",
         "type": [
             "core"
         ],
         "api": [
-            "python2"
+            "python2",
+            "python3"
         ],
         "description": "Automatically patch opaque predicates",
-        "longdescription": "This script will automatically remove conditional branches which have constant conditions. It can be run from the command line via `python -mOpaquePredicatePatcher.__main__` (if the BinaryNinja python library is in your path) or installed as a plugin in your user plugin directory. Useful for analyzing obfsucated malware.",
+        "longdescription": "This script will automatically remove conditional branches which have constant conditions. It can be run from the command line via `python -mOpaquePredicatePatcher.__main__` (if the BinaryNinja python library is in your path) or installed as a plugin in your user plugin directory. Useful for analyzing obfsucated malware. ![Before and After](opaque_predicate_elimination.gif 'Before and After')",
         "license": {
             "name": "MIT",
             "text": "Copyright (c) 2017 Vecto 35 LLC\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
         },
+        "platforms": [
+            "Windows",
+            "Linux",
+            "Darwin"
+        ],
+        "installinstructions": {
+            "Windows": "",
+            "Linux": "",
+            "Darwin": ""
+        },
         "dependencies": {},
-        "version": "1.0 alpha",
+        "version": "1.1 alpha",
         "author": "Vector 35 LLC",
-        "minimumBinaryNinjaVersion": 0,
-        "lastUpdated": 1558272857,
+        "minimumbinaryninjaversion": 0,
+        "lastUpdated": 1560720413,
         "projectUrl": "https://github.com/Vector35/OpaquePredicatePatcher",
         "projectData": {
             "id": 105457407,
@@ -86,14 +98,14 @@
             "releases_url": "https://api.github.com/repos/Vector35/OpaquePredicatePatcher/releases{/id}",
             "deployments_url": "https://api.github.com/repos/Vector35/OpaquePredicatePatcher/deployments",
             "created_at": "2017-10-01T16:48:08Z",
-            "updated_at": "2018-11-21T02:08:37Z",
-            "pushed_at": "2019-05-19T13:34:17Z",
+            "updated_at": "2019-06-16T21:24:37Z",
+            "pushed_at": "2019-06-16T21:26:53Z",
             "git_url": "git://github.com/Vector35/OpaquePredicatePatcher.git",
             "ssh_url": "git@github.com:Vector35/OpaquePredicatePatcher.git",
             "clone_url": "https://github.com/Vector35/OpaquePredicatePatcher.git",
             "svn_url": "https://github.com/Vector35/OpaquePredicatePatcher",
             "homepage": null,
-            "size": 10,
+            "size": 2302,
             "stargazers_count": 12,
             "watchers_count": 12,
             "language": "Python",
@@ -147,11 +159,10 @@
             "subscribers_count": 1
         },
         "authorUrl": "https://github.com/Vector35",
-        "packageUrl": "https://api.github.com/repos/Vector35/OpaquePredicatePatcher/zipball/v1.0",
+        "packageUrl": "https://api.github.com/repos/Vector35/OpaquePredicatePatcher/zipball/v1.1",
         "path": "Vector35_OpaquePredicatePatcher",
-        "commit": "223b4f9f97b5914672ff089b7dfec0a57517cff8",
-        "platforms": [],
-        "installinstructions": {}
+        "commit": "72e8178f3a4b62f2a8233499ba5d188c13c5dd9a",
+        "minimumBinaryNinjaVersion": 0
     },
     {
         "pluginmetadataversion": 2,
@@ -280,7 +291,7 @@
             "clone_url": "https://github.com/Vector35/sample_plugin.git",
             "svn_url": "https://github.com/Vector35/sample_plugin",
             "homepage": null,
-            "size": 22,
+            "size": 25,
             "stargazers_count": 7,
             "watchers_count": 7,
             "language": "Python",
