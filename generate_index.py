@@ -8,6 +8,7 @@ import requests
 from dateutil import parser
 import base64
 import re
+from datetime import datetime
 
 ghUrl = "https://github.com/"
 user = None
@@ -180,18 +181,22 @@ def main():
         json.dump(allPluginsList, pluginsFile, indent="    ")
 
     if args.readme:
+        info = ""
+        if os.path.exists("INFO"):
+            info = open("INFO", encoding="utf-8").read() + u"\n"
         with open("README.md", "w", encoding="utf-8") as readme:
+            readme.write(info)
             readme.write(u"# Binary Ninja Plugins\n\n")
             readme.write(u"| PluginName | Author | Last Updated | License | Type | Description |\n")
             readme.write(u"|------------|--------|--------------|---------|----------|-------------|\n")
 
             for plugin in allPlugins.values():
-                readme.write(u"|[{name}]({projectUrl})|[{author}]({authorUrl})|{lastUpdated}|[{license}]({plugin}/LICENSE)|{plugintype}|{description}|\n".format(name = plugin['name'],
+                readme.write(u"|[{name}]({projectUrl})|[{author}]({authorUrl})|{lastUpdated}|{license}|{plugintype}|{description}|\n".format(name = plugin['name'],
                     projectUrl=plugin["projectUrl"],
                     plugin=plugin["name"],
                     author=plugin["author"],
                     authorUrl=plugin["authorUrl"],
-                    lastUpdated=plugin["lastUpdated"],
+                    lastUpdated=datetime.fromtimestamp(plugin["lastUpdated"]).date(),
                     license=plugin['license']['name'],
                     plugintype=', '.join(sorted(plugin['type'])),
                     description=plugin['description']))
