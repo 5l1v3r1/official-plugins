@@ -10,7 +10,6 @@ import base64
 import re
 
 ghUrl = "https://github.com/"
-pluginsDirectory = "plugins"
 user = None
 token = None
 
@@ -181,7 +180,7 @@ def main():
         json.dump(allPluginsList, pluginsFile, indent="    ")
 
     if args.readme:
-        with open(os.path.join(pluginsDirectory, "README.md"), "w", encoding="utf-8") as readme:
+        with open("README.md", "w", encoding="utf-8") as readme:
             readme.write(u"# Binary Ninja Plugins\n\n")
             readme.write(u"| PluginName | Author | Last Updated | License | Type | Description |\n")
             readme.write(u"|------------|--------|--------------|---------|----------|-------------|\n")
@@ -196,6 +195,5 @@ def main():
                     license=plugin['license']['name'],
                     plugintype=', '.join(sorted(plugin['type'])),
                     description=plugin['description']))
-            readme.write(u"\n\n")
 if __name__ == "__main__":
     main()
